@@ -3,5 +3,6 @@ export default function Home() {
       <main>
         <h1>Welcome to pizza shop</h1>
       </main>
+      
   );
 }
