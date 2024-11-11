@@ -13,6 +13,13 @@ export default {
 		fontFamily: {
 			manrope: ["var(--font-manrope)", ...fontFamily.sans],
 		},
+		container: {
+			center: true,
+			padding: '1rem',
+		  },
+		  spacing: {
+			'py-5': '20px',
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
