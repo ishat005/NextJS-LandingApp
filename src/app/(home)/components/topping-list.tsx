@@ -19,9 +19,9 @@ const toppings = [
   },
   {
     id: "3",
-    name: "Cheese",
+    name: "Extra Cheese",
     image: "/cheese.png",
-    price: 1.99,
+    price: 2.75,
     isAvailable: true,
   },
 ];

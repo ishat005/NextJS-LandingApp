@@ -12,19 +12,11 @@ import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import ToppingList from "./topping-list";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 import { ShoppingCart } from "lucide-react";
 
-export type Product = {
+export type Beverage = {
   id: string;
   name: string;
   description: string;
@@ -33,10 +25,10 @@ export type Product = {
 };
 
 type PropTypes = {
-  product: Product;
+  product: Beverage;
 };
 
-const ProductCard = ({ product }: PropTypes) => {
+const BeverageCard = ({ product }: PropTypes) => {
   return (
     <Card className="border-none rounded-xl">
       <CardHeader className="flex items-center justify-center">
@@ -105,7 +97,6 @@ const ProductCard = ({ product }: PropTypes) => {
                         htmlFor="medium"
                         className="flex flex-col items-center justify-between rounded-md border-2 bg-white p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                       >
-                        {/* <Icons.paypal className="mb-3 h-6 w-6" /> */}
                         Medium
                       </Label>
                     </div>
@@ -121,53 +112,11 @@ const ProductCard = ({ product }: PropTypes) => {
                         htmlFor="large"
                         className="flex flex-col items-center justify-between rounded-md border-2 bg-white p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                       >
-                        {/* <Icons.apple className="mb-3 h-6 w-6" /> */}
                         Large
                       </Label>
                     </div>
                   </RadioGroup>
                 </div>
-
-                <div>
-                  <h4 className="mt-6">Choose the crust</h4>
-                  <RadioGroup
-                    defaultValue="card"
-                    className="grid grid-cols-3 gap-4 mt-2"
-                  >
-                    <div>
-                      <RadioGroupItem
-                        value="thin"
-                        id="thin"
-                        className="peer sr-only"
-                        aria-label="Thin"
-                      />
-                      <Label
-                        htmlFor="thin"
-                        className="flex flex-col items-center justify-between rounded-md border-2 bg-white p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
-                      >
-                        Thin
-                      </Label>
-                    </div>
-
-                    <div>
-                      <RadioGroupItem
-                        value="thick"
-                        id="thick"
-                        className="peer sr-only"
-                        aria-label="Thick"
-                      />
-                      <Label
-                        htmlFor="thick"
-                        className="flex flex-col items-center justify-between rounded-md border-2 bg-white p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
-                      >
-                        {/* <Icons.paypal className="mb-3 h-6 w-6" /> */}
-                        Thick
-                      </Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-
-                <ToppingList />
 
                 <div className="flex items-center justify-between mt-12">
                   <span className="font-bold">&#36;{product.price}</span>
@@ -185,4 +134,4 @@ const ProductCard = ({ product }: PropTypes) => {
   );
 };
 
-export default ProductCard;
+export default BeverageCard;
