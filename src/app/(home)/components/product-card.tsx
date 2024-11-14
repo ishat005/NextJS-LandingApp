@@ -19,6 +19,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import ToppingList from "./topping-list";
 
 export type Product = {
   id: string;
@@ -162,6 +163,8 @@ const ProductCard = ({ product }: PropTypes) => {
                     </div>
                   </RadioGroup>
                 </div>
+
+                <ToppingList />
               </div>
             </div>
           </DialogContent>
